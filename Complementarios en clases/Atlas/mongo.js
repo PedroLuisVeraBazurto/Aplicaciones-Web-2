@@ -26,7 +26,7 @@ const Permisos1=new Permiso({nombre:"Grabar"});
 const Grabarpermiso=await Permisos1.save();
 const Permisos2=new Permiso({nombre:"Eliminar"});
 const Eliminarpermiso=await Permisos2.save();
-const usuario1=new Usuario({nombre:"Prueba Sexto A Reyes Macias",
+const usuario1=new Usuario({nombre:"Prueba Sexto A Vera Pedro",
  idGrupo: guardarGrupo._id,
  permisos:[
      {permiso:Grabarpermiso._id, estado:true},
