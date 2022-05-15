@@ -1,0 +1,16 @@
+{
+  "name": "tarea-3",
+  "version": "1.0.0",
+  "main": "mongoAplicaciones.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.3.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}
