@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node servidor.js",
+    "dev": "nodemon servidor.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.3.3"
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
   }
 }

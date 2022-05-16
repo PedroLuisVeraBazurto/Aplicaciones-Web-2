@@ -68,5 +68,5 @@ res.status(200).send({
 
 })
 app.listen(PUERTO,()=>{
-    console.log( `Servidor Funcionando en http://localhost:${PUERTO}`)
+    console.log( `Servidor Funcionando en http://localhost: ${PUERTO}`)
 })
