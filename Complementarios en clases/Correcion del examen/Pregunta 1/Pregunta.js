@@ -5,7 +5,7 @@ const notasAlumnos=[
 ]
 const principal =  (notasA) => {
  let arreglo=[];
-for(i=0;i<notasAl.length;i++){
+for(i=0;i<notasA.length;i++){
    const dato= notasA[i].asignatura.nombre
 if(dato=="Aplicaciones web 2"){
     var nota=notasA[i].nota1;
