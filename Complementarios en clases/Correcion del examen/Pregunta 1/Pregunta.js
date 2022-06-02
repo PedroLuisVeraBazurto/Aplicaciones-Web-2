@@ -1,21 +1,21 @@
 const notasAlumnos=[
-    {nota1:2,nota2:4,asignatura:{nombre:"Aplicaciones web 2"},alumno:{nombre:"Miguel C."}},
-    {nota1:3,nota2:2,asignatura:{nombre:"Aplicaciones web 2"},alumno:{nombre:"Pedro S."}},
-    {nota1:5,nota2:2,asignatura:{nombre:"Estructura de datos"},alumno:{nombre:"Juan P."}},
+    {nota1:5,nota2:2,asignatura:{nombre:"Aplicaciones web 2"},alumno:{nombre:"Pedro Vera"}},
+    {nota1:4,nota2:3,asignatura:{nombre:"Aplicaciones web 2"},alumno:{nombre:"Luis Miguel"}},
+    {nota1:4,nota2:5,asignatura:{nombre:"Estructura de datos"},alumno:{nombre:"Chayanne"}},
 ]
-const principal =  (notasAlumnos) => {
+const principal =  (notasA) => {
  let arreglo=[];
-for(i=0;i<notasAlumnos.length;i++){
-   const dato= notasAlumnos[i].asignatura.nombre
+for(i=0;i<notasAl.length;i++){
+   const dato= notasA[i].asignatura.nombre
 if(dato=="Aplicaciones web 2"){
-    var nota=notasAlumnos[i].nota1;
+    var nota=notasA[i].nota1;
     
-    var nota2= nota=notasAlumnos[i].nota2;
+    var nota2= nota=notasA[i].nota2;
     
-    var suma=(notasAlumnos[i].nota1+notasAlumnos[i].nota2);
+    var suma=(notasA[i].nota1+notasA[i].nota2);
    
     if(suma<8){
-arreglo.push(notasAlumnos[i].alumno.nombre);
+arreglo.push(notasA[i].alumno.nombre);
 
 }    
 
@@ -25,5 +25,5 @@ console.log(arreglo)
 }
 return arreglo;
   };
- const data=  principal(notasAlumnos);
+ const data=  principal(notasA);
  console.log(data)
