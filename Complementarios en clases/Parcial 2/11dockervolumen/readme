@@ -1,0 +1,21 @@
+IR A LA CARPETA DE 05 CAPAS
+CREAR UN ARCHIVO Dockerfile
+
+FROM node
+COPY . /var/www
+WORKDIR /var/www
+RUN npm install
+EXPOSE 3000
+ENTRYPOINT ["npm", "start"]
+
+LUEGO CREAR UN ARCHIVO docker-compose.yml
+
+services: '3'
+   adpi:
+   depends_on:
+      - mongo
+    enviroment: 
+      - PORT
+      - MONGO_CNN= mongodb://:27017/test  
+   mongo: 
+       image: mongo

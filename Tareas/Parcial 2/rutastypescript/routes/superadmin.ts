@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import {Superadmin} from '../controllers/index'
+import {Superadmin} from '../controller'
 const {Crearsuperadmin} = Superadmin
 //import {} from '../middlewares'
 class SuperAdminc {
