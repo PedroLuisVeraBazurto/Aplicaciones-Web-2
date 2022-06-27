@@ -1,6 +1,8 @@
 import {Router} from 'express'
+import {check} from 'express-validator'
 import {Superadmin} from '../controller'
 const {Crearsuperadmin} = Superadmin
+import {validarCampo, validarContraseña, validacionNombre} from '../middlewares'
 //import {} from '../middlewares'
 class SuperAdminc {
     router : Router;

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+    api:
+        container_name: Docker
+        restart: always
+        build: .
+        ports:
+          - "8000:8000"
+        depends_on:
+          - mongoDB
+        environment:
+        - PORT="8000"
+        - MONGODB_CNN=mongodb://mongo:27017/test
+
+    mongo:
+      container_name: MongoDB
+      image: mongo
+      ports: 
+        - "27017:27017"
+      logging:
+          driver: none
