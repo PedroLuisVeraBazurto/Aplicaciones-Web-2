@@ -3,7 +3,7 @@ import {Router} from 'express'
 import cors from 'cors'
 import {Application} from 'express'
 import dbConnection from './database/config'
-import superA from './routes/superadmin'
+import superA from './router/superadmin'
  class Server{
     private app: Application;
     router: Router;
@@ -17,8 +17,7 @@ import superA from './routes/superadmin'
        this.router=Router();
        this.port = process.env.PORT;
        this.paths= {
-        cliente:
-        '/api/cliente',//definimos la ruta que tomara para cliente en el server
+        cliente: '/api/cliente',//definimos la ruta que tomara para cliente en el server
          }
          this.middlewares();
         this.routes();

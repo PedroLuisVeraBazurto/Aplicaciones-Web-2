@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  reserva:
+    build: ./Complementario1
+  clientes:
+    build: ./Semana 10-Docker
+  superadmin:
+   build: ./rutastypescript
+  admin:
+    build: ./ComplementarioDockerizar
+  mongo:
+    container_name: MongoDs
+    image: mongo
+    ports: 
+      - "27017:27017"
+    logging:
+      driver: none
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - reserva
+      - clientes
+      - superadmin
+      - admin
+      - mongo
+    
