@@ -1,8 +1,8 @@
 
 import mongoose from "mongoose";
 import {Schema, model} from "mongoose";
-import{IClientes} from '../interfaces'
-const ClienteSchema: mongoose.Schema= new Schema<IClientes>({
+import{Isuper} from '../interfaces'
+const spSchema: mongoose.Schema= new Schema<Isuper>({
     Nombre:{
         type:String,
         required:[true, `El nombre del producto es obligatorio`],
@@ -30,7 +30,7 @@ const ClienteSchema: mongoose.Schema= new Schema<IClientes>({
         type:String,
     }
 })
- const Cliente:mongoose.Model<IClientes>= model<IClientes>('Cliente',ClienteSchema);
+ const supera:mongoose.Model<Isuper>= model<Isuper>('supera',spSchema);
  export{
-    Cliente
+    supera
  }

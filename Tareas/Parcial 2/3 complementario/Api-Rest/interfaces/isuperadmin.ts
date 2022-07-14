@@ -1,5 +1,5 @@
 //import mongoose from "mongoose";
-export interface IClientes{
+export interface Isuper{
     Nombre:String;
     Usuario:String;
     Celular?:String;

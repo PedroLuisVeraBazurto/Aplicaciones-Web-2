@@ -1,7 +1,7 @@
 import {Router} from 'express'
 import{check}from 'express-validator'
 import{Producto} from '../controllers'
-const {Obtener_productos,Obtener_clientes,obtener_id,buscar,cambiar_contra,eliminar_usu,cambio_total}=Producto
+const { Obtener_Spa,Obtener_Sp,obtener_id, buscaA,cambiar_contra,eliminar_admin,cambio_total}=Producto
 import{validarCampo,validacionNombre,validarContraseña}  from '../middlewares'
 class ClienteRoutes{
     router: Router;
@@ -11,12 +11,12 @@ class ClienteRoutes{
     
     }
     routes(){
-        this.router.post('/',validacionNombre,validarContraseña,Obtener_productos);
-        this.router.get('/',Obtener_clientes);
-        this.router.get('/sesion',buscar);
+        this.router.post('/',Obtener_Sp);
+        this.router.get('/',Obtener_Spa);
+        this.router.get('/sesion',buscaA);
         this.router.put('/cambio',cambiar_contra);
         this.router.put('/:id',cambio_total);
-        this.router.put('/eliminar',eliminar_usu);
+        this.router.put('/eliminar',eliminar_admin);
         this.router.get('/:id',obtener_id);
       
          

@@ -3,7 +3,7 @@ import {Router} from 'express'
 import cors from 'cors'
 import {Application} from 'express'
 import dbConnection from './database/config'
-import clienteRoutes from './routes/superadministador'
+import RoutesSp from './routes/superadministador'
  class Server{
     private app: Application;
     router: Router;
@@ -17,8 +17,8 @@ import clienteRoutes from './routes/superadministador'
        this.router=Router();
        this.port = process.env.PORT;
        this.paths= {
-        cliente:
-        '/api/cliente',//definimos la ruta que tomara para cliente en el server
+        Superadministrador:
+        '/api/Superadministrador',//definimos la ruta que tomara para cliente en el server
          }
          this.middlewares();
         this.routes();
@@ -38,8 +38,8 @@ import clienteRoutes from './routes/superadministador'
         await dbConnection();
     }
     routes(){// Rutas donde importortamos los símbolos de modulos al hambito actual.
-      this.app.use(this.paths.cliente
-            ,clienteRoutes);
+      this.app.use(this.paths.Superadministrador
+            ,RoutesSp);
           
     
     }

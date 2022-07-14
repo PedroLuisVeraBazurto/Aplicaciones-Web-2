@@ -17,7 +17,7 @@ const express_1 = __importDefault(require("express"));
 const express_2 = require("express");
 const cors_1 = __importDefault(require("cors"));
 const config_1 = __importDefault(require("./database/config"));
-const Clientes_1 = __importDefault(require("./routes/Clientes"));
+const superadministador_1 = __importDefault(require("./routes/superadministador"));
 class Server {
     //nota_routes = require('./routes/Products');
     constructor() {
@@ -25,7 +25,7 @@ class Server {
         this.router = (0, express_2.Router)();
         this.port = process.env.PORT;
         this.paths = {
-            cliente: '/api/cliente', //definimos la ruta que tomara para cliente en el server
+            Superadministrador: '/api/Superadministrador', //definimos la ruta que tomara para cliente en el server
         };
         this.middlewares();
         this.routes();
@@ -43,7 +43,7 @@ class Server {
         });
     }
     routes() {
-        this.app.use(this.paths.cliente, Clientes_1.default);
+        this.app.use(this.paths.Superadministrador, superadministador_1.default);
     }
     listen() {
         this._express.listen(this.port, () => {

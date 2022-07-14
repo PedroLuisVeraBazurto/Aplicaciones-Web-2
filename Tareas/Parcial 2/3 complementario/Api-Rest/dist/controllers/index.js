@@ -24,5 +24,5 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Producto = void 0;
-const Producto = __importStar(require("./Clientes"));
+const Producto = __importStar(require("./superadmin"));
 exports.Producto = Producto;

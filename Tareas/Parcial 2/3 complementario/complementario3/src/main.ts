@@ -1,13 +1,13 @@
 import './style.css'
 import {httpAxios} from './server'
 import axios from 'axios';
-import {Cliente} from './Interfaces/superA'
+import {SUPER} from './Interfaces/superA'
 
 
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
-let _id: string | undefined
+let _id: string | undefined = ''
 const actualizar_table= async()=>{
   const respproductos = await (await httpAxios.get('cliente')).data
   console.log(respproductos);
@@ -33,7 +33,7 @@ const actualizar_table= async()=>{
     ele.addEventListener('click',async ()=>{
      // httpAxios.get(`productos/62ba6c56f37a5cffcfc5ddb`)
      console.log((ele as HTMLButtonElement).value)
-     const {data}= await  httpAxios.get<Cliente>(`cliente/${(ele as HTMLButtonElement).value}`);
+     const {data}= await  httpAxios.get<SUPER>(`Superadministrador/${(ele as HTMLButtonElement).value}`);
      console.log({data})
      nombre.value=data.Nombre;
      usuario.value=data.Usuario;
@@ -46,11 +46,6 @@ const actualizar_table= async()=>{
   })
 }
 
-
-/*app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`*/
 
 app.innerHTML +=`
 <div >
@@ -195,7 +190,7 @@ const cambiar={
   _id: datas[0]._id,
   Contrasena: contra.value,
 }
-  const data=await(await httpAxios.put('cliente/cambio',cambiar)).data
+  const data=await(await httpAxios.put('superadministrador/cambio',cambiar)).data
 alert(data)
 actualizar_table();
 })
@@ -208,7 +203,7 @@ elimina.addEventListener('click',async ()=>{
     _id: datas[0]._id,
     Estado: false,
   }
-    const data=await(await httpAxios.put('cliente/eliminar',cambiar)).data
+    const data=await(await httpAxios.put('Superadministrador/eliminar',cambiar)).data
   alert(data)
   actualizar_table();
   })
@@ -225,7 +220,7 @@ const inicio=()=>{
 }
 
 const funcion_grabar=()=>{
-  const grabar:Cliente={
+  const grabar:SUPER={
     Nombre: nombre.value,
     Usuario: usuario.value,
     Correo :correo.value,
@@ -240,13 +235,13 @@ const grabar=async(_id:any)=>{
  
   console.log(_id)
   if(_id.trim().length>0){
-    const respuesta:Cliente=await( await  httpAxios.put(`cliente/${_id}`, enviar)).data
+    const respuesta:SUPER=await( await  httpAxios.put(`Superadministrador/${_id}`, enviar)).data
    alert(respuesta);
      return;
      }
 
   try{
-    const data=await(await httpAxios.post<Cliente>('cliente',enviar)).data
+    const data=await(await httpAxios.post<SUPER>('Superadministrador',enviar)).data
     alert(data)
     actualizar_table();
   }
