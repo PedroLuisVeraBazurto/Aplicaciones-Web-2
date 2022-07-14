@@ -1,4 +1,4 @@
-import{IClientes} from './iClientes'
+import{IClientes} from './isuperadmin'
 export{
     IClientes
 }

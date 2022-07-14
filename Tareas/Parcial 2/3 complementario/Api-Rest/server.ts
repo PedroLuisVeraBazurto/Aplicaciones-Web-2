@@ -3,7 +3,7 @@ import {Router} from 'express'
 import cors from 'cors'
 import {Application} from 'express'
 import dbConnection from './database/config'
-import clienteRoutes from './routes/Clientes'
+import clienteRoutes from './routes/superadministador'
  class Server{
     private app: Application;
     router: Router;

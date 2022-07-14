@@ -1,7 +1,8 @@
 import './style.css'
 import {httpAxios} from './server'
-import {Cliente} from './Interfaces/ICliente'
 import axios from 'axios';
+import {Cliente} from './Interfaces/superA'
+
 
 
 
@@ -53,7 +54,7 @@ const actualizar_table= async()=>{
 
 app.innerHTML +=`
 <div >
-<h1>Registre los usuarios</h1>
+<h1>Registre superadmin</h1>
 <label for='nombre' >Nombre</label><input id='nombre'/>
 <label for='usuario' >Usuario</label><input id='usuario'/>
 <label for='correo' >Correo</label><input id='correo'/>
@@ -71,7 +72,7 @@ app.innerHTML +=`
 </div>
 
 <div>
-<h1>Ingreso de usuario</h1>
+<h1>Ingreso de Superadmin</h1>
 <label for='nombres' >Usuario</label><input id='nombres'/>
 <label for='contrasenas' >Contraseña</label><input id='contrasenas'/>
 <button id="iniciar">Buscar</button>

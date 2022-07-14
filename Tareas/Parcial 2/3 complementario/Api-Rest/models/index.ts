@@ -1,4 +1,4 @@
-import{Cliente}from './Clientes'
+import{Cliente}from './supA'
 export{
     Cliente
 }

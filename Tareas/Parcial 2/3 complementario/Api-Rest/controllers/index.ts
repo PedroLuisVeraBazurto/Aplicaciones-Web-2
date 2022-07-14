@@ -1,4 +1,4 @@
-import* as Producto from './Clientes'
+import* as Producto from './superadmin'
 export{
     Producto
 }

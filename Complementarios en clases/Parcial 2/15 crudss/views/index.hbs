@@ -1,0 +1,29 @@
+{{!-- <h1>{{productos:respuesta.data.productos}}</h1>
+<p>Welcome to {{productos:respuesta.data.productos}}</p> --}}
+
+
+ <div class="container">
+ <div class="row">
+    <a href="/producto/nuevo" class="btn btn-primary">NUEVO</a>
+    <table class="table table-striped">
+        <thead>
+            <th>NOMBRE</th>
+            <th>PRECIO</th>
+            <th>COSTO</th>
+        </thead>
+        {{#each productos}}
+        <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.precio}}</td>
+            <td>{{this.costo}}</td>
+            <td><a href="/producto/modificar/{{this_id}}">Modificar</a> </td>
+            <td><a href="/producto/eliminar/{{this_id}}">Eliminar</a> </td>
+
+        </tr>
+        {{/each}}
+    </table>
+
+ </div>
+
+ </div>
+
