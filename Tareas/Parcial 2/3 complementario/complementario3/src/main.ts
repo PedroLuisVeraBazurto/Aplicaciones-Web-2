@@ -9,7 +9,7 @@ import {SUPER} from './Interfaces/superA'
 const app = document.querySelector<HTMLDivElement>('#app')!
 let _id: string | undefined = ''
 const actualizar_table= async()=>{
-  const respproductos = await (await httpAxios.get('cliente')).data
+  const respproductos = await (await httpAxios.get('Superadministrador')).data
   console.log(respproductos);
 
   
@@ -147,7 +147,7 @@ iniciar.addEventListener('click',async()=>{
 
 const enviar=inicio();
 console.log(enviar)
-const data=await(await httpAxios.get('cliente/sesion',{
+const data=await(await httpAxios.get('Superadministrador/sesion',{
   params: {
     Usuario: enviar.Usuario,
     Contrasena: enviar.Contrasena,
@@ -190,7 +190,7 @@ const cambiar={
   _id: datas[0]._id,
   Contrasena: contra.value,
 }
-  const data=await(await httpAxios.put('superadministrador/cambio',cambiar)).data
+  const data=await(await httpAxios.put('Superadministrador/cambio',cambiar)).data
 alert(data)
 actualizar_table();
 })

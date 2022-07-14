@@ -10,13 +10,29 @@ body {
   height:665px;
   background-image: url("../src/image/fondo.jpg")
 }
-table {
+Tabla {
+  table-layout: fixed;
   width: 100%;
-  border: 1px solid #000;
+  border-collapse: collapse;
+  border: 3px solid rgb(0, 128, 9);
 }
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
 th, td {
-  width: 25%;
-  text-align: left;
-  vertical-align: top;
-  border: 1px solid #000;
+  padding: 20px;
 }
